@@ -25,7 +25,7 @@ const Navbar = () => {
             <Link to = "/"><h4>Home</h4></Link>
             <Link to = "/contact"><h4>Contact</h4></Link>
             <Link to = "/favs"><h4>Favs</h4></Link>
-            <button onClick={toggleDarkMode} className={`${isDark ? 'buttonThemeDark' : 'buttonTheme'}`}>{isDark ? '☀':'🌙'}</button>
+            <button onClick={toggleDarkMode} className={`${!isDark ? 'buttonThemeDark' : 'buttonTheme'}`}>{!isDark ? '☀':'🌙'}</button>
           </div>
         </div>
       </div>
