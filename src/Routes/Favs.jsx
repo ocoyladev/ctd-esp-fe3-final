@@ -6,15 +6,18 @@ import { useContextGlobal } from "../Components/utils/global.context";
 
 const Favs = () => {
   const { state } = useContextGlobal();
-
-
+  const isDark = state.theme;
   return (
     <>
-      <h1>Dentists Favs</h1>
-      <div className="card-grid">
-        {state.favs.map((dentist) => 
-            <Card key={dentist.id} dentist={dentist}/>
-        )}        
+      <div className={`divCentral divAll ${!isDark ? 'divContactDark' : ''}`}>
+        <div>
+          <h1>Dentists Favs</h1>
+          <div className="card-grid">
+            {state.favs.map((dentist) => 
+                <Card key={dentist.id} dentist={dentist}/>
+            )}        
+          </div>
+        </div>
       </div>
     </>
   );

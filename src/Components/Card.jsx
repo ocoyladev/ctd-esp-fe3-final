@@ -6,6 +6,7 @@ import { useContextGlobal } from "./utils/global.context";
 const Card = ({dentist}) => {
   const { state, dispatch } = useContextGlobal();
   const isFav = state.favs.find((fav) => fav.id == dentist.id)
+  const isDark = state.theme;
   const addFav = ()=>{
       // setFavs((favs) => [...favs, dentist])
       dispatch({type: isFav ? "REMOVE_FAV" : "ADD_FAV", payload: dentist})
@@ -15,7 +16,7 @@ const Card = ({dentist}) => {
       // dispatch({type:"ADD_FAV", payload:dentist});
       }
   return (
-    <div className="card">
+    <div className={`${!isDark ? 'cardDark' : 'card'}`}>
         <Link to ={"/dentist/" + dentist.id}>
           <img src ="./images/doctor.jpg" alt={dentist.name}></img>
           <h2 style={{textAlign: "center"}} className="h2Card">{dentist.name}</h2>

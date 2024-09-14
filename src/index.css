@@ -1,3 +1,8 @@
+:root {
+  --main-a-color: black;
+
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -7,6 +12,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+navbarLight{
+
+}
+
+navbarDark{
+
+}
+
 img {
   width: 100%;
 }
@@ -14,10 +27,17 @@ img {
 .iconFooter {
   filter: invert(100%);
   width: 25px;
+  margin: 5px;
 }
 
 .imgFooter {
-  height: 70px;
+  height: 55px;
+
+}
+
+.imgFooterDark {
+  height: 55px;
+  filter: invert(50%) !important;
 }
 
 code {
@@ -32,25 +52,86 @@ code {
   cursor: pointer;
 }
 
+.buttonTheme{
+  background-color: black;
+  padding: 5px;
+  border-radius: 5px;
+  height: 32px;
+  width: 32px;
+}
+
+.buttonThemeDark{
+  background-color: white;
+  padding: 5px;
+  border-radius: 5px;
+  height: 32px;
+  width: 32px;
+}
+
 h1{
   text-align: center;
 }
 
 nav{
   display: flex;
-  width: 100vw;
   justify-content: center;
   padding: 1rem;
+  width: 100%;
+  background-color: #ffdede;
 }
 
-nav > div {
-  width: 80vw;  
+main{
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2em 0 0 white;
+}
+
+.mainDark{
+  background-color: #272731;
+  box-shadow: 0 2em 0 0 #272731;
+}
+.navbarTitle::first-letter {
+  color: red;
+}
+
+.navbarTitle{
+  margin-left: -20px;
+}
+
+.navbarDiv{
+  display: flex;
+  align-items: center;
+}
+
+.divCentral{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divCentralDark{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.divCentralDark *{
+  color:white;
+}
+
+.divSpace{
+  width: 80%;
   display: flex;
   justify-content: space-between;
-  margin: auto;
+  align-items: center;
 }
-nav > div > div > a > h4{
-  display: inline;
+
+.divAll{
+  width: 100%;
+}
+
+div.navbarDiv > a {
+  margin: 0 25px;
 }
 
 a{
@@ -67,12 +148,12 @@ footer {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   position: relative;
   bottom: 0;
-  width: 90%;
   height: 40px;
   margin-top: 2rem;
+  border-top: #ff8e8e solid 20px;
 }
 
 footer > img{
@@ -94,6 +175,17 @@ form{
 }
 
 .card{
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 0.5rem 0.5rem 0 0.5rem;
+  border: 0.5px solid rgb(136, 136, 136);
+}
+
+.cardDark{
+  background-color: #1e1818;
   display: flex;
   justify-content: space-around;
   flex-direction: column;
@@ -141,5 +233,30 @@ tr:nth-child(even) {
   color: white;
 }
 .dark > a {
+  color: white;
+}
+
+.darkNav {
+  background-color: #000;
+}
+.darkNav * {
+  color: white;
+}
+
+.footerDark{
+  background-color: #000;  
+  border-top: #4b4545 solid 20px;
+}
+
+.footerDark *{
+  filter: invert(0%);
+}
+
+.divContactDark {
+  background-color: #272731;
+  box-shadow: 0 2em 0 0 #272731;
+}
+
+.divContactDark *{
   color: white;
 }

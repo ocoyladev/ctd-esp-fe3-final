@@ -7,15 +7,19 @@ import { useContextGlobal } from '../Components/utils/global.context'
 const Home = () => {
   
   const { state } = useContextGlobal();
+  const isDark = state.theme;
 
   return (
-    <main className="" >
-      <h1>Home</h1>
-      <div className='card-grid'>
+    <main className={`${!isDark ? 'mainDark' : ''}`} >
+      <div className={`${!isDark ? 'divCentralDark' : 'divCentral'}`}>
+        <div>
+        <h1>Home</h1>
+        <div className='card-grid'>
         {state.dentist.map((dentist) => (
           <Card key = {dentist.id} dentist = {dentist}/>
         ))}
-        
+        </div>
+      </div>
       </div>
     </main>
   )

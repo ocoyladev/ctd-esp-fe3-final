@@ -7,7 +7,7 @@ import { reducer } from "../../Reducers/reducer";
 export const ContextGlobal = createContext(undefined);
 const lsFavs = JSON.parse(localStorage.getItem('favs')) || [];
 const initialState = {
-  theme: true,
+  theme: false,
   favs: lsFavs,
   dentist: [],
 }
