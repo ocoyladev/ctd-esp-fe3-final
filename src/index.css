@@ -7,6 +7,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+img {
+  width: 100%;
+}
+
+.iconFooter {
+  filter: invert(100%);
+  width: 25px;
+}
+
+.imgFooter {
+  height: 70px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,9 +38,19 @@ h1{
 
 nav{
   display: flex;
-  width: 80vw;
-  justify-content: flex-start;
+  width: 100vw;
+  justify-content: center;
   padding: 1rem;
+}
+
+nav > div {
+  width: 80vw;  
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+}
+nav > div > div > a > h4{
+  display: inline;
 }
 
 a{
@@ -95,7 +118,7 @@ form{
 }
 
 table {
- border-collapse: collapse;
+    border-collapse: collapse;
     border-spacing: 0;
     width: 100%;
     display: table;
